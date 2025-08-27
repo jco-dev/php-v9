@@ -13,14 +13,14 @@
     <h3>Tareas completadas</h3>
     <ul>
         <?php foreach ($tareasCompletadas as $tarea): ?>
-            <li><?= $tarea->titulo; ?></li>
+            <li style="color: <?= $tarea->color; ?>;"><?= $tarea->titulo; ?></li>
         <?php endforeach; ?>
     </ul>
 
     <h3>Tareas pendientes</h3>
     <ul>
         <?php foreach ($tareasPendintes as $tarea): ?>
-            <li><?= $tarea->titulo; ?></li>
+            <li style="color: <?= $tarea->color; ?>;"><?= $tarea->titulo; ?></li>
         <?php endforeach; ?>
     </ul>
 
