@@ -10,3 +10,5 @@ create table tareas(
 insert into tareas (titulo, color, completado) values ('Aprender PHP', '#0000FF', 1),
  ('Aprender VUE', '#00FF00', 0),
  ('Aprender LARAVEL', '#FF0000', 0);
+
+ create user 'us_tareas'@'%' identified by '1V9V\j|27V';
