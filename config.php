@@ -5,8 +5,10 @@ return [
         'type' => 'mysql',
         'host' => 'localhost',
         'database' => 'cursophp',
-        'user' => 'root',
-        'password' => 'root',
+        // 'user' => 'root',
+        'user' => 'us_tareas',
+        // 'password' => 'root',
+        'password' => 'U$_7area$',
     ],
     'error' => true
 ];

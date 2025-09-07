@@ -47,10 +47,19 @@
     </ul>
 
     <hr>
+    <?php if (isset($_SESSION['errores'])) { ?>
+        <div>
+            <ul>
+                <?php foreach ($_SESSION['errores'] as $campo => $mensaje) : ?>
+                    <li style="color: #FF0000"><?= htmlspecialchars($mensaje) ?></li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    <?php } ?>
     <form action="crear-tarea.php" method="POST">
         <h2>Registro de una nueva tarea</h2>
-        <input type="text" name="titulo" placeholder="Titulo de tarea">
-        <input type="color" name="color">
+        <input type="text" name="titulo" placeholder="Titulo de tarea" required>
+        <input type="color" name="color" required>
         <button type="submit">Registrar Tarea</button>
     </form>
 

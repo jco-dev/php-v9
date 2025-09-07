@@ -1,4 +1,5 @@
 <?php
+session_start();
 $config = require_once('config.php');
 if ($config['error']) {
     ini_set('display_errors', 1);
