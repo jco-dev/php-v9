@@ -1,8 +1,5 @@
 <?php
-require_once 'funciones.php';
-require_once 'Validador.php';
-
-$query = require 'bootstrap.php';
+require_once 'Core/Database/Validador.php';
 
 $reglas = [
     'titulo' => 'required|min:5',

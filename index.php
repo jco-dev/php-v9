@@ -1,20 +1,17 @@
 <?php
-require_once 'funciones.php'; // require include include_once  require_once
-require_once 'Models/Tarea.php';
-require_once 'Enums/ColoresEnum.php';
+$query = require 'Core/bootstrap.php';
+require 'Models/Tarea.php';
+require 'Core/Router.php';
+require 'Core/Request.php';
 
-$query = require 'bootstrap.php';
+$rutas = require 'routes.php';
 
-$tareas = $query->obtrenerTodos('tareas', 'Tarea');
+$url = Request::url();
 
-// $tareas[0]->cambiarColor(ColoresEnum::GREEN->value);
+$router = new Router;
+$router->registrar($rutas);
 
-$tareasCompletadas = array_filter($tareas, function ($tarea) {
-    return $tarea->completado;
-});
+// echo $router->manejar($url);
+require $router->manejar($url);
 
-$tareasPendintes = array_filter($tareas, function ($tarea) {
-    return !$tarea->completado;
-});
-
-require 'index.view.php';
+// require 'Controllers/index.php';
