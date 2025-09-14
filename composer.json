@@ -1,0 +1,19 @@
+{
+    "name": "cpaco/clase9",
+    "description": "Aplicacion de control de tareas",
+    "type": "project",
+    "authors": [
+        {
+            "name": "carlos",
+            "email": "cpacoquispe@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    },
+    "autoload": {
+        "classmap": [
+            "./"
+        ]
+    }
+}

@@ -2,13 +2,13 @@
 
 return [
     'database' => [
-        'type' => 'mysql',
-        'host' => 'localhost',
-        'database' => 'cursophp',
+        'type' => env('DB_TYPE', 'mysql'),
+        'host' => env('DB_HOST', 'localhost'),
+        'database' => env('DB_NAME'),
         // 'user' => 'root',
-        'user' => 'us_tareas',
+        'user' => env('DB_USER', 'root'),
         // 'password' => 'root',
-        'password' => 'U$_7area$',
+        'password' => env('DB_PASSWORD', ''),
     ],
-    'error' => true
+    'error' => env('APP_ERROR') === 'true'
 ];
